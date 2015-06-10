@@ -69,13 +69,13 @@ sequelize.sync().then(function(){
                 Quiz.count().then(function (count){
                     if (count === 0){
                         Quiz.bulkCreate(
-                           [ {pregunta: '¿Cual es la capital de Italia?',respuesta: 'Roma', UserId:2},
-                              {pregunta: '¿Qué instrumento musical tiene nombre y forma geométricos?',respuesta: 'Triángulo', UserId:2},
-                              {pregunta: '¿Cuáles son las dos primeras palabras de la Biblia?',respuesta:'Al principio', UserId:2},
-                              {pregunta: '¿Cómo se llaman las crías de la mula?',respuesta: 'No tiene', UserId:2},
-                              {pregunta: '¿Qué isla del Caribe tiene nombre de flor?',respuesta: 'Margarita', UserId:2},
-                              {pregunta: '¿Cual es la capital de Portugal?',respuesta: 'Lisboa', UserId:2},
-                             {pregunta: '¿Cuántas manos tiene un caballo?', respuesta: 'Dos', UserId:2} 
+                           [ {pregunta: '¿Cual es la capital de Italia?',respuesta: 'Roma', UserId:2, tema: 'Humanidades'},
+                              {pregunta: '¿Qué instrumento musical tiene nombre y forma geométricos?',respuesta: 'Triángulo', UserId:2, tema: 'Ocio'},
+                              {pregunta: '¿Cuáles son las dos primeras palabras de la Biblia?',respuesta:'Al principio', UserId:2, tema: 'Otros'},
+                              {pregunta: '¿Cómo se llaman las crías de la mula?',respuesta: 'No tiene', UserId:2,tema: 'Ciencia'},
+                              {pregunta: '¿Qué isla del Caribe tiene nombre de flor?',respuesta: 'Margarita', UserId:2, tema: 'Humanidades'},
+                              {pregunta: '¿Cual es la capital de Portugal?',respuesta: 'Lisboa', UserId:2, tema: 'Humanidades'},
+                             {pregunta: '¿Cuántas manos tiene un caballo?', respuesta: 'Dos', UserId:2, tema: 'Otros'} 
                              ]
                         ).then(function(){console.log('Base de datos inicializada')});
                     };

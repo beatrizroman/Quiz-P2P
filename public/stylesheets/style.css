@@ -18,6 +18,10 @@ nav span             { margin: 0px 10px 0px 0px;}
 .quiz_img       { height: 150px; float: left;} 
 
 
+span.small           { font-size:12px; }
+
+
+
 h1 { color: ;
      text-align: center;
      font-style: oblique;
